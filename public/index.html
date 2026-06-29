@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MilyLab — Impresiones 3D personalizadas en Culiacán. Trofeos, medallas, centros de mesa y piezas a pedido." />
+  <title>MilyLab | Impresiones 3D</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../src/styles/base.css" />
+  <link rel="stylesheet" href="../src/styles/components.css" />
+  <link rel="stylesheet" href="../src/styles/animations.css" />
+  <link rel="stylesheet" href="../src/styles/responsive.css" />
+
+  <!-- Favicon (reemplazar con logo real) -->
+  <link rel="icon" type="image/png" href="images/logo/logo.png" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container navbar__inner">
+      <a href="#inicio" class="navbar__logo">MilyLab</a>
+      <ul class="navbar__links">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#tecnologia">Tecnología</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="cotizar.html" class="btn btn-primary">Cotizar pieza</a></li>
+      </ul>
+      <button class="navbar__hamburger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" style="padding-top: calc(var(--navbar-height) + var(--space-16)); background: linear-gradient(135deg, var(--color-bg-teal) 0%, var(--color-bg-pink) 100%); text-align: center;">
+    <div class="container">
+      <img src="images/logo/logo.png" alt="MilyLab logo" style="width:140px; margin: 0 auto var(--space-6);" />
+      <h1 class="hero__title section-title fade-up" style="font-size: clamp(2rem, 5vw, 3.5rem);">
+        Damos forma a tus ideas
+      </h1>
+      <p class="section-subtitle fade-up delay-1">
+        Impresiones 3D personalizadas en Culiacán · Trofeos, medallas, centros de mesa y más.
+      </p>
+      <div class="hero__actions fade-up delay-2" style="display:flex; gap:var(--space-4); justify-content:center; flex-wrap:wrap;">
+        <a href="cotizar.html" class="btn btn-primary">Cotiza tu pieza</a>
+        <a href="#eventos" class="btn btn-outline">Ver catálogo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section id="nosotros">
+    <div class="container">
+      <h2 class="section-title fade-up">¿Quiénes somos?</h2>
+      <p class="section-subtitle fade-up delay-1">
+        <!-- Editar este texto con la historia real del emprendimiento -->
+        Somos Mily y su equipo, apasionados por la tecnología y el diseño. Comenzamos explorando
+        la impresión 3D como curiosidad y hoy creamos piezas que emocionan a nuestros clientes.
+        Combinamos ingeniería industrial y desarrollo de software para ofrecer productos de calidad
+        hechos con cariño en Culiacán, Sinaloa.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== TECNOLOGÍA ===== -->
+  <section id="tecnologia" style="background: var(--color-bg-teal);">
+    <div class="container">
+      <h2 class="section-title fade-up">Tecnología que usamos</h2>
+      <p class="section-subtitle fade-up delay-1">
+        <!-- Completar con datos reales: modelo de impresora, materiales, etc. -->
+        Trabajamos con impresoras FDM de precisión, filamentos PLA y PETG de alta calidad,
+        y software de diseño profesional para garantizar cada detalle.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== EVENTOS / CATÁLOGO ===== -->
+  <section id="eventos">
+    <div class="container">
+      <h2 class="section-title fade-up">Productos destacados</h2>
+      <p class="section-subtitle fade-up delay-1">
+        Cada pieza es única. Aquí algunos de nuestros trabajos más populares.
+      </p>
+      <div class="gallery-grid fade-up delay-2">
+        <!-- Las tarjetas de productos se inyectan con gallery.js -->
+        <!-- O se pueden agregar manualmente aquí mientras crece el catálogo -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" style="background: var(--color-bg-dark); color: var(--color-text-light);">
+    <div class="container" style="text-align:center;">
+      <h2 class="section-title fade-up" style="color:var(--color-primary);">¿Listo para tu proyecto?</h2>
+      <p class="fade-up delay-1" style="color:var(--color-bg-teal); margin-bottom:var(--space-8);">
+        Escríbenos y te cotizamos sin compromiso.
+      </p>
+      <div class="fade-up delay-2" style="display:flex; gap:var(--space-4); justify-content:center; flex-wrap:wrap;">
+        <a href="cotizar.html" class="btn btn-primary">Formulario de cotización</a>
+        <a href="#" class="btn whatsapp-float-btn" style="background:#25D366; color:#fff;">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#1a1a1a; color:#888; text-align:center; padding:var(--space-6);">
+    <p style="font-size:var(--text-sm);">© 2025 MilyLab · Impresiones 3D · Culiacán, Sinaloa</p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="whatsapp-float" aria-label="Contactar por WhatsApp" href="#">
+    <svg viewBox="0 0 32 32" fill="white" width="28" height="28"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.482.664 4.808 1.82 6.816L2 30l7.386-1.79A13.93 13.93 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 01-5.826-1.594l-.418-.248-4.382 1.062 1.1-4.264-.272-.436A11.45 11.45 0 014.5 16C4.5 9.649 9.649 4.5 16 4.5S27.5 9.649 27.5 16 22.351 27.5 16 27.5zm6.29-8.528c-.344-.172-2.036-1.004-2.352-1.118-.316-.114-.546-.172-.776.172-.23.344-.89 1.118-1.09 1.348-.2.23-.4.258-.744.086-.344-.172-1.452-.536-2.766-1.706-1.022-.912-1.712-2.038-1.912-2.382-.2-.344-.022-.53.15-.702.154-.154.344-.4.516-.6.172-.2.23-.344.344-.574.114-.23.058-.43-.028-.602-.086-.172-.776-1.872-1.064-2.562-.28-.672-.564-.58-.776-.592l-.66-.012c-.23 0-.602.086-.918.43-.316.344-1.204 1.176-1.204 2.868s1.232 3.326 1.404 3.556c.172.23 2.426 3.708 5.878 5.2.822.354 1.464.566 1.964.724.824.262 1.574.224 2.168.136.66-.1 2.036-.832 2.324-1.636.288-.804.288-1.492.202-1.636-.086-.144-.316-.23-.66-.4z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script type="module" src="../src/scripts/pages/home.js"></script>
+</body>
+</html>
