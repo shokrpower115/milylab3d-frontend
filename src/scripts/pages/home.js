@@ -8,6 +8,7 @@ import { initNavbar }           from '../components/navbar.js';
 import { initWhatsApp }         from '../components/whatsapp.js';
 import { initScrollAnimations } from '../utils/helpers.js';
 import { HeroCarousel }         from '../components/hero-carousel.js';
+import { Gallery }              from '../components/gallery.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
@@ -23,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'images/hero/portal_lata_c.png',
     // Agregar más imágenes según sea necesario
   ];
+
+  const gallery = new Gallery('[data-gallery]');
+  gallery.init();
 
   const heroCarousel = new HeroCarousel('[data-carousel]', heroImageUrls);
 

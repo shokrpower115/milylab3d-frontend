@@ -34,6 +34,12 @@ const CONFIG = {
     { id: "eventos",      label: "Centros de mesa",   icon: "🌸" },
     { id: "personalizados", label: "Personalizados",  icon: "✨" },
   ],
+
+//     API_URL: 'http://192.168.1.16/api',  // produccion (local LAN)
+
+    API_URL: 'https://localhost:7109/api',    // Desarrollo (local)
+    WHATSAPP: '526671234567',
+    NOMBRE_NEGOCIO: 'MilyLab 3D'
 };
 
 export default CONFIG;

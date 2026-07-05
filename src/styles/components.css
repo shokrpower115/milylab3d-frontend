@@ -254,3 +254,129 @@
     align-items: center;
   }
 }
+
+/* ===== GALLERY / CARRUSEL DE PRODUCTOS ===== */
+.gallery {
+    padding: var(--space-12) 0;
+    background: var(--color-bg-light);
+}
+
+.gallery__carrusel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.gallery__track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.gallery__card {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.gallery__img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+.gallery__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    text-align: center;
+}
+
+.gallery__categoria {
+    background: var(--color-primary);
+    color: #ffffff;
+    padding: var(--space-1) var(--space-3);
+    border-radius: 999px;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.gallery__nombre {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--color-bg-dark);
+}
+
+.gallery__descripcion {
+    font-size: var(--text-base);
+    color: var(--color-gray);
+    max-width: 500px;
+}
+
+.gallery__precio {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.gallery__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.gallery__btn:hover {
+    background: var(--color-bg-dark);
+}
+
+.gallery__btn--prev {
+    left: 0;
+}
+
+.gallery__btn--next {
+    right: 0;
+}
+
+.gallery__empty {
+    text-align: center;
+    color: var(--color-gray);
+    padding: var(--space-8);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .gallery__card {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .gallery__info {
+        align-items: flex-start;
+    }
+}
